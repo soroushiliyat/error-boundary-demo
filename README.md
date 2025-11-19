@@ -2,6 +2,10 @@
 
 This project demonstrates how to handle runtime errors in React using a custom `ErrorBoundary` component. It is built with **Vite + TypeScript** and is designed to showcase professional error handling for junior React developers.
 
+##Live Demo:
+https://error-boundary-demo-one.vercel.app/
+
+
 ## 🚀 Features
 
 - ✅ Custom `ErrorBoundary` class component
