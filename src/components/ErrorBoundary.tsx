@@ -19,15 +19,15 @@ class ErrorBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: unknown, info: unknown) {
-    console.error("خطای گرفته‌شده:", error, info);
+    console.error("Error:", error, info);
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <div style={{ padding: '2rem', color: 'red', textAlign: 'center' }}>
-          <h2>😢 اوه نه! یه مشکلی پیش اومده.</h2>
-          <p>لطفاً صفحه رو رفرش کن یا بعداً امتحان کن.</p>
+          <h2>😢 Oh no! Something went wrong.</h2>
+          <p>Please refresh the page or try again later.</p>
         </div>
       );
     }
