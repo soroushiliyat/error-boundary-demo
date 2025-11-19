@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# 🧪 Error Boundary Demo – React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates how to handle runtime errors in React using a custom `ErrorBoundary` component. It is built with **Vite + TypeScript** and is designed to showcase professional error handling for junior React developers.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Custom `ErrorBoundary` class component
+- ✅ Fallback UI to prevent app crashes
+- ✅ Clear separation between safe and buggy components
+- ✅ Clean project structure with Vite + TypeScript
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+src/ ├── components/ │   ├── ErrorBoundary.tsx      // Error handling logic │   ├── BuggyComponent.tsx     // Simulates a runtime error │   └── SafeComponent.tsx      // Renders safely ├── App.tsx                    // Combines components ├── main.tsx                   // Entry point └── index.css                  // Basic styling
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧪 How It Works
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- `SafeComponent` renders normally.
+- `BuggyComponent` throws an error (`user.name` on null).
+- `ErrorBoundary` catches the error and displays a fallback UI instead of crashing the app.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+📌 Purpose
+This project is built to demonstrate error handling skills in React for portfolio and job interviews. It shows that the developer understands how to isolate errors and protect the user experience.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Made with 💻 by a Junior React Developer
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+اگه خواستی، می‌تونم badgeهای حرفه‌ای (Vite, TypeScript, GitHub Actions) هم به README اضافه کنم یا یه کاور تصویری برای ریپازیتوری طراحی کنیم. بریم سراغش؟ 😎
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+
